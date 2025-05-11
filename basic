@@ -1,1 +1,30 @@
+#basic knowledge
+
+##when you start,import what you need
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(a,b,c)  
+##define the domain of x ,a refer to the starting point ,b refer to the end point,
+##c refer to how many points you want in the space
+
+plt.figure(num=3,figsize(5,8)) 
+##num:to number figures     figsize():to control the size of figures
+
+plt.plot(x,y,color='red',linewidth=1.0,linestyle='--')
+#to draw lines showing the relation between x and y,the latter is dependent variable
+
+plt.show()
+#to show the figure
+
+plt.xlim(a,b)
+plt.ylim(a,b)   ##set the range of the figure (it is different from 'linspace')
+plt.xlabel('i am x')
+plt.ylabel('i am y')    #label the axies
+
+new_ticks = np.linspace(a,b,c)      ##set a new ticks of axies| a:the starting point,b:the end point,c:the number of segment you want
+plt.xticks(new_ticks)       ##change the ticks of x axis
+plt.yticks([0,1,2],
+           [r'$bad$',r'$normal$',r'$good$'])
+## change the ticks of y axis,the first line is 'ticks',teh second line is 'label' of 'ticks'
 
